@@ -12,7 +12,9 @@ const Favourite = () => {
     const fetch = async () => {
       const res = await axios.get(
         "https://bookheaven-server-2.onrender.com/api/v1/get-favourite-books",
-        { headers }
+        {
+          headers,
+        }
       );
 
       setFavBooks(res.data.data);

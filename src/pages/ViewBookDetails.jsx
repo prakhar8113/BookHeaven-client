@@ -56,7 +56,9 @@ const ViewBookDetails = () => {
     try {
       const response = await axios.delete(
         "https://bookheaven-server-2.onrender.com/api/v1/delete-book",
-        { headers }
+        {
+          headers,
+        }
       );
       alert(response.data.message);
       history("/all-books");

@@ -21,7 +21,9 @@ const AllOrders = () => {
     const fetch = async () => {
       const res = await axios.get(
         "https://bookheaven-server-2.onrender.com/api/v1/get-all-orders",
-        { headers }
+        {
+          headers,
+        }
       );
 
       setOrderHistory(res.data.data);

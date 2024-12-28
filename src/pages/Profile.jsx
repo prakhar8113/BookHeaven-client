@@ -23,7 +23,9 @@ const Profile = () => {
       const fetch = async () => {
         const response = await axios.get(
           "https://bookheaven-server-2.onrender.com/api/v1/getUserData",
-          { headers }
+          {
+            headers,
+          }
         );
         setProfileData(response.data);
       };
